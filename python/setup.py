@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='Alexandria-Upload-Utils',
-    version='0.2.0',
+    version='0.2.1',
     url='https://github.com/tedw4rd/alexandria-upload-utils/',
     license='MIT',
     author='Ted Aronson',
