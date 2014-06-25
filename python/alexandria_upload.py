@@ -42,7 +42,7 @@ def create_build(build_name, metadata, extradata, archive_url, upload_user, api_
 
 def upload_file(filename, build_id, artifact_type, 
 				archive_url, upload_user, api_key):
-	post_data = {'type': artifact_type, 'build_number': build_id}
+	post_data = {'type': artifact_type, 'build_id': build_id}
 
 	post_url = archive_url + "/upload/"
 	
