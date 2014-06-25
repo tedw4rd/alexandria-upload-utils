@@ -65,12 +65,11 @@ def upload_file(filename, build_id, artifact_type,
 def create_build_and_upload(name, metadata, extradata, artifacts, archive_url, upload_user, api_key):
 	build_id = create_build(name, metadata, extradata, archive_url, upload_user, api_key)
 	
-	artifacts = build_data["artifacts"]
 	for k, v in artifacts.iteritems():
 		upload_file(v, build_id, k, archive_url, upload_user, api_key)
 
 
 def upload_with_build_file(filename, archive_url, upload_user, api_key):
 	build_data = json.load(open(filename))
-	create_build_and_upload(build_data["name"], build_data["metadata"], build_data["extradata"], archive_url, upload_user, api_key)
+	create_build_and_upload(build_data["name"], build_data["metadata"], build_data["extradata"], build_data["artifacts"], archive_url, upload_user, api_key)
 
