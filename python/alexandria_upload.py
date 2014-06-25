@@ -9,7 +9,7 @@ def get_api_auth(user_name, api_key):
 	return "ApiKey %s:%s" % (user_name, api_key)
 
 
-def create_build(name, metadata, extradata, archive_url, upload_user, api_key):
+def create_build(build_name, metadata, extradata, archive_url, upload_user, api_key):
 	metadata_list = []
 	for k, v in metadata.iteritems():
 		metadata_list.append({'category': k, 'value': v})
